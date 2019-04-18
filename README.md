@@ -16,7 +16,7 @@ Chromeの履歴をfzfで選択して開くことができるスクリプト
 # 直近1万件の履歴を出力
 $ sh chromeHistory.sh
 
-# 予めgrepしたものを出力
+# 予めgrepしたものを出力(fzfでは日付・タイトルしか表示されないので、URLで抽出したい人用)
 $ sh chromeHistory.sh PATTERN
 
 # 日付指定
