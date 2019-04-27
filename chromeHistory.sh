@@ -7,6 +7,7 @@
 # ▶sh chromeHistory.sh [PATTERN or -d]
 # 第一引数にgrepしたい単語を入力することが可能。grep時はURL、タイトル、日付込の出力からgrepする。
 # -d を指定した場合、日付を選択して表示することが可能。
+# fzfで「export」を選択すれば画面に出力される
 #
 # [思想]
 # sqliteで絞れるところは絞る。絞りきれなかった部分をshellコマンドで整形する。
