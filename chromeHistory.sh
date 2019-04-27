@@ -58,14 +58,24 @@ function show_chrome_history() {
 
     # 見栄えを良くするためURLは表示しない
     local select_history=$(
-        echo "$chrome_history" \
-        | grep "$filter" \
+        echo ",,export\n$chrome_history" \
+        | grep -P "(,,export|$filter)" \
         | awk -F ',' '!a[$2]++' \
         | awk -F ',' '{print $3"\t"$2}' \
         | tr -d "\r" \
         | fzf \
         | tr -d "\n"
     )
+
+    # terminalに出力したいときのため
+    if [ `echo $select_history | tr -d " "` = "export" ]; then 
+        echo "$chrome_history" \
+        | grep "$filter" \
+        | awk -F ',' '!a[$2]++' \
+        | awk -F ',' '{print $3"\t"$2}' \
+        | tr -d "\r" 
+        return
+    fi
 
     # URL取得処理
     if [ -n "$select_history" ]; then
