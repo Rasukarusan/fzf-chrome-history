@@ -23,3 +23,8 @@ $ sh chromeHistory.sh PATTERN
 $ sh chromeHistory.sh -d
 ```
 
+# Option
+
+fzfで表示される「export」を選択すると画面に出力します。
+
+![demo_export.gif](https://user-images.githubusercontent.com/17779386/56843356-6a793b80-68da-11e9-84fa-d0d24e63f92f.gif)
