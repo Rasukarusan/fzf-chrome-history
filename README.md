@@ -1,6 +1,6 @@
 # fzf-chrome-history
 
-Chromeの履歴をfzfで選択して開くことができるスクリプト
+**Fuzzy search and open Chrome history**
 
 ![Demo](https://user-images.githubusercontent.com/17779386/56350061-dc7bc180-6204-11e9-84cc-11f0cf919426.gif)
 
@@ -13,18 +13,18 @@ Chromeの履歴をfzfで選択して開くことができるスクリプト
 # Usage
 
 ```sh
-# 直近1万件の履歴を出力
+# Output the latest 10,000 history
 $ sh chromeHistory.sh
 
-# 予めgrepしたものを出力(fzfでは日付・タイトルしか表示されないので、URLで抽出したい人用)
+# grep by PATTERN
 $ sh chromeHistory.sh PATTERN
 
-# 日付指定
+# Date designation
 $ sh chromeHistory.sh -d
 ```
 
 # Option
 
-fzfで表示される「export」を選択すると画面に出力します。
+Select "export" displayed by fzf to stdout to the screen.
 
 ![demo_export.gif](https://user-images.githubusercontent.com/17779386/56843356-6a793b80-68da-11e9-84fa-d0d24e63f92f.gif)
